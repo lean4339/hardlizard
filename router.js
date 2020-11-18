@@ -6,8 +6,8 @@ module.exports = function(req,res){
         case '/':
             index.homePage(req,res)
             break;
-        case '/en-cartelera':
-            index.enCartelera(req,res)
+        case '/preguntasFrecuentes':
+            index.preguntasFrecuentes(req,res)
             break
         default:
             break;
