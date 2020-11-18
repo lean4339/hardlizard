@@ -1,6 +1,7 @@
 const homePage = require('./homePage');
 const FQ = require('./preguntasFrecuentes');
 const masVotadas = require('./masVotadas');
+const contacto = require('./contacto');
 
 module.exports = {
     homePage : function(req,res){
@@ -59,5 +60,13 @@ module.exports = {
         });
         console.log(mejores)
         res.end()
+    },
+
+    contacto: function(req,res){
+        res.write(`================== TITULO: ====================\n\n`);
+        res.write(`\t\t${contacto.title}\n\n`);
+        res.write(`================== CONTACTO ====================\n\n`);
+        res.write(`${contacto.content}`);
+        res.end();
     }
 }

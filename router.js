@@ -11,6 +11,9 @@ module.exports = function(req,res){
             break;
         case '/mas-votadas':
             index.masVotadas(req,res);
+        case '/contacto':
+            index.contacto(req,res);
+
         default:
             break;
     }
