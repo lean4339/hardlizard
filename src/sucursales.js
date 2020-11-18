@@ -1,5 +1,4 @@
-const require =("./src./
-index")
+const require =("./src./index")
 
 res.write('------------------\n')
             res.write('NUESTRAS SALAS');
