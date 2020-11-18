@@ -1,9 +1,10 @@
 const fs = require("fs");
 
 module.exports = cosa  =  {
-    bd: "../data/movies.json",
+    titulo : "=============== Mas Votadas ==================\n ",
+    bd: "./data/movies.json",
     leerjson : function (){
-
+        
         return JSON.parse(fs.readFileSync(this.bd, "utf-8"));
         
         
@@ -22,12 +23,13 @@ module.exports = cosa  =  {
         mejores.forEach(element => {
             sumatoria = sumatoria + element.vote_average;
         });
-        return sumatoria;
+        return sumatoria.toFixed(2);
     },
     mejores : function(){
         let mejores = this.leerjson().movies.filter(function(peli){
             return peli.vote_average >=7;
         })
+        
         return mejores;
     }
 }

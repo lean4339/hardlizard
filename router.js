@@ -8,7 +8,9 @@ module.exports = function(req,res){
             break;
         case '/preguntasFrecuentes':
             index.preguntasFrecuentes(req,res)
-            break
+            break;
+        case '/mas-votadas':
+            index.masVotadas(req,res);
         default:
             break;
     }

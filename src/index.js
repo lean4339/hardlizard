@@ -1,5 +1,6 @@
 const homePage = require('./homePage');
 const FQ = require('./preguntasFrecuentes');
+const masVotadas = require('./masVotadas');
 
 module.exports = {
     homePage : function(req,res){
@@ -40,5 +41,23 @@ module.exports = {
 
         res.end();
 
+    },
+    masVotadas: function(req,res){
+        res.write(`${masVotadas.titulo}`);
+        res.write('\n \n');
+        res.write(`Total de peliculas: ${masVotadas.cantidad()}`)
+        res.write('\n \n');
+        res.write(`Promedio: ${masVotadas.promedio()}`)
+        res.write('\n \n');
+        let mejores = masVotadas.mejores();
+        mejores.forEach(element => {
+            res.write(`Titulo: ${element.title}\n`);
+            res.write(`Promedio: ${element.vote_average}\n`);
+            res.write(`Reseña: ${element.overview}`);
+            res.write('\n \n');
+
+        });
+        console.log(mejores)
+        res.end()
     }
 }
