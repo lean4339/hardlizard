@@ -3,4 +3,4 @@
 ## Integrantes:
 - Fulano
 - Zutano
-- Mengano
+- Karen Junco
