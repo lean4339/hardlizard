@@ -95,9 +95,8 @@ module.exports = {
 
         theaters.forEach((t, i) => {
             res.write(`${i}) Title: ${t.name} \n `)
-            res.write(`Reply: ${t.name} \n \n`)
-            res.write(`Reply: ${t.address} \n \n`)
-            res.write(`Reply: ${t.description} \n \n`)
+            res.write(`Address: ${t.address} \n \n`)
+            res.write(`Decription: ${t.description} \n \n`)
         });
 
         res.end();
