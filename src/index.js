@@ -11,6 +11,10 @@ module.exports = {
         res.end()
     },
     enCartelera : function(req,res){
+        movies.movies.forEach(movie => {
+            res.write(movie.title + '\n')
+        });
 
+        res.end()
     }
 }
