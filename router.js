@@ -9,6 +9,12 @@ module.exports = function(req,res){
         case '/preguntasFrecuentes':
             index.preguntasFrecuentes(req,res)
             break;
+        case '/enCartelera':
+            index.enCartelera(req,res)
+            break;
+        case '/sucursales':
+            index.sucursales(req,res)
+            break;
         case '/mas-votadas':
             index.masVotadas(req,res);
         case '/contacto':
