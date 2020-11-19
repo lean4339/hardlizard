@@ -20,7 +20,9 @@ module.exports = function(req,res){
         case '/contacto':
             index.contacto(req,res);
             break;
-
+        case '/en-cartelera':
+            index.enCartelera(req,res);
+            break; 
         default:
             break;
     }

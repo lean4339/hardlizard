@@ -70,7 +70,7 @@ module.exports = {
 
         res.write(`=============== ${enCartelera.titleCartelera} ==================\n`)
         res.write('\n')
-        res.write(`=============== Total de peliculas : ${total_movies} ==================\n`)
+        res.write(`============ === Total de peliculas : ${total_movies} ==================\n`)
         res.write('\n')
         res.write('=============== Lista de peliculas ====================\n \n')
 
@@ -109,5 +109,5 @@ module.exports = {
         res.write(`================== CONTACTO ====================\n\n`);
         res.write(`${contacto.content}`);
         res.end();
-    }
+    },
 }

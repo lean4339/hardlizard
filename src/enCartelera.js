@@ -1,4 +1,9 @@
-const fs = require('fs')
+
+const { Console } = require('console');
+const fs = require('fs');
+const { title } = require('process');
+const { enCartelera } = require('.');
+const { leerJSON } = require('./homePage');
 
 module.exports = {
     titleCartelera: 'En Cartelera',
@@ -7,3 +12,5 @@ module.exports = {
         return JSON.parse(fs.readFileSync(this.cartelera, 'utf-8'));
     }
 }
+
+
