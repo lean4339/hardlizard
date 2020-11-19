@@ -9,7 +9,7 @@ module.exports = {
     homePage : function(req,res){
         const {total_movies} = homePage.leerJSON();
 
-        res.write(`=============== Titulo: ${homePage.title} ==================\n`)
+        res.write(`=============== Titulo: ${homePage.titleHomePage} ==================\n`)
         res.write('\n')
         res.write(`=============== Cantidad peliculas: ${total_movies} ==================\n`)
         res.write('\n')
@@ -94,7 +94,7 @@ module.exports = {
         res.write('=============== Lista de salas ====================\n')
 
         theaters.forEach((t, i) => {
-            res.write(`${i}) Title: ${t.faq_title} \n `)
+            res.write(`${i}) Title: ${t.name} \n `)
             res.write(`Reply: ${t.name} \n \n`)
             res.write(`Reply: ${t.address} \n \n`)
             res.write(`Reply: ${t.description} \n \n`)
