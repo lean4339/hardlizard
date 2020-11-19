@@ -2,6 +2,8 @@ const homePage = require('./homePage');
 const FQ = require('./preguntasFrecuentes');
 const masVotadas = require('./masVotadas');
 const contacto = require('./contacto');
+const sucursales = require('./sucursales');
+const enCartelera = require('./enCartelera');
 
 module.exports = {
     homePage : function(req,res){
@@ -58,10 +60,49 @@ module.exports = {
             res.write('\n \n');
 
         });
-        console.log(mejores)
+
         res.end()
     },
 
+    enCartelera : function(req,res){
+
+        const {total_movies, movies} = enCartelera.leerJSON();
+
+        res.write(`=============== ${enCartelera.titleCartelera} ==================\n`)
+        res.write('\n')
+        res.write(`=============== Total de peliculas : ${total_movies} ==================\n`)
+        res.write('\n')
+        res.write('=============== Lista de peliculas ====================\n \n')
+
+        movies.forEach((p, i) => {
+            res.write(`${i}) Title: ${p.title} \n `)
+            res.write(`overview: ${p.overview} \n \n`)
+        });
+
+        res.end();
+
+    },
+
+    sucursales : function(req,res){
+
+        const {total_theaters, theaters} = sucursales.leerJSON();
+
+        res.write(`=============== ${sucursales.titleTheaters} ==================\n`)
+        res.write('\n')
+        res.write(`=============== Total de salas : ${total_theaters} ==================\n`)
+        res.write('\n')
+        res.write('=============== Lista de salas ====================\n')
+
+        theaters.forEach((t, i) => {
+            res.write(`${i}) Title: ${t.faq_title} \n `)
+            res.write(`Reply: ${t.name} \n \n`)
+            res.write(`Reply: ${t.address} \n \n`)
+            res.write(`Reply: ${t.description} \n \n`)
+        });
+
+        res.end();
+
+    },
     contacto: function(req,res){
         res.write(`================== TITULO: ====================\n\n`);
         res.write(`\t\t${contacto.title}\n\n`);
