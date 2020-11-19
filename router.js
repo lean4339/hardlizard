@@ -24,6 +24,8 @@ module.exports = function(req,res){
             index.enCartelera(req,res);
             break; 
         default:
+            res.write("ERROR 404! Page not found")
+            res.end()
             break;
     }
 }
