@@ -1,6 +1,8 @@
 # Grupo nro 10
 ## Trabajo: Hard Lizard
 ## Integrantes:
-- Fulano
-- Zutano
-- Mengano
+- Nico
+- Lean
+- Karen Junco
+- Matias Gonzalez
+- Lucas Herlan

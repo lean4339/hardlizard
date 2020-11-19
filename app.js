@@ -1,5 +1,6 @@
 const http = require('http'); //requiero el modulo nativo HTTP
 const router = require('./router'); //requiero el enrutador
+const masVotadas = require('./src/masVotadas');
 
 http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
